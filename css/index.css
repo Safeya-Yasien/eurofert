@@ -1,0 +1,25 @@
+/* logo */
+/* font-family: "Krona One", sans-serif; */
+/* button font */
+/* font-family: "Abhaya Libre", serif; */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-color: #134f31;
+  --black-color: #000;
+  --white-color: #fff;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
