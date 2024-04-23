@@ -13,6 +13,7 @@
   --main-color: #134f31;
   --black-color: #000;
   --white-color: #fff;
+  --hover-color: #288d5b;
 }
 
 body {
@@ -59,12 +60,11 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  min-height: 97px;
+  /* position: relative; */
+  min-height: 75px;
 }
 .header .logo {
-  width: 160px;
-  height: 90px;
+  width: 100px;
   margin: 0;
 }
 .header .links {
@@ -73,6 +73,7 @@ a {
 }
 .header .links ul {
   display: flex;
+  margin: 0;
 }
 .header .links ul a {
   padding: 40px 10px;
@@ -91,19 +92,24 @@ a {
   display: flex;
   gap: 15px;
 }
-.header .icons i {
+.header .icons a {
   border: 1px solid var(--main-color);
   border-radius: 50%;
   padding: 5px;
   color: var(--black-color);
+  transition: 0.3s;
+}
+.header .icons a:hover {
+  background-color: var(--hover-color);
+  color: white;
 }
 /* end header */
 /* start landing */
 .landing {
-  background-image: url("../imgs/landing-1.jpg");
+  /* background-image: url("../imgs/landing-4.jpg"); */
   background-size: cover;
   background-position: center;
-  min-height: calc(100vh - 97px);
+  min-height: calc(100vh - 75px);
   position: relative;
 }
 .landing .content {
@@ -125,5 +131,9 @@ a {
   padding: 5px 25px;
   border-radius: 15px;
   border: none;
+  transition: 0.3s;
+}
+.landing .content button:hover {
+  background-color: var(--hover-color);
 }
 /* end landing */
