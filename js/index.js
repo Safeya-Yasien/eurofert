@@ -3,10 +3,10 @@
 let landing = document.querySelector(".landing");
 
 let arr = [
-  "url('../imgs/landing-1.jpg')",
-  "url('../imgs/landing-2.jpg')",
-  "url('../imgs/landing-3.jpg')",
-  "url('../imgs/landing-4.jpg')",
+  "url('imgs/landing-1.jpg')",
+  "url('imgs/landing-2.jpg')",
+  "url('imgs/landing-3.jpg')",
+  "url('imgs/landing-4.jpg')",
 ];
 let i = 0;
 
