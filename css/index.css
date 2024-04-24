@@ -5,12 +5,6 @@
 
 @font-face {
   font-family: "Abhaya Libre";
-  src: url("../webfonts/abhaya/AbhayaLibre-Regular.ttf") format(truetype);
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Abhaya Libre";
   src: url("../webfonts/abhaya/AbhayaLibre-Bold.ttf") format(truetype);
   font-weight: bold;
 }
@@ -32,11 +26,11 @@
   --black-color: #000;
   --white-color: #fff;
   --hover-color: #288d5b;
+  --main-transition: 0.3s;
 }
 
 body {
-  font-family: "Abhaya Libre", serif;
-  height: 6000px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -72,14 +66,18 @@ a {
 }
 
 /* start header */
-.home {
-  height: 100vh;
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: transparent;
 }
-.header .container {
+
+.header .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* position: relative; */
   min-height: 75px;
 }
 .header .logo {
@@ -97,41 +95,44 @@ a {
 .header .links ul a {
   padding: 40px 10px;
   font-size: 20px;
-  transition: 0.3px;
+  transition: var(--main-transition);
   color: var(--black-color);
-  position: relative;
-  z-index: 2;
 }
+
+.header .links ul a.active {
+  font-weight: bold;
+}
+
 .header .links ul a.active,
 .header .links ul a:hover {
   color: var(--main-color);
 }
 .header .icons {
-  font-size: 20px;
   display: flex;
-  gap: 15px;
 }
 .header .icons a {
-  border: 1px solid var(--main-color);
+  /* border: 1px solid var(--main-color); */
   border-radius: 50%;
   padding: 5px;
   color: var(--black-color);
   transition: 0.3s;
 }
 .header .icons a:hover {
-  background-color: var(--hover-color);
-  color: white;
+  color: var(--hover-color);
 }
 /* end header */
 
 /* start landing */
 .landing {
-  /* background-image: url("../imgs/landing-4.jpg"); */
+  background-image: url("../imgs/landing-1.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
-  min-height: calc(100vh - 75px);
+  height: 100vh;
   position: relative;
+  transition: background-image 0.5s ease;
 }
+
 .landing .content {
   max-width: 500px;
 }
@@ -143,17 +144,23 @@ a {
 .landing .content p span {
   font-family: "Krona One", sans-serif;
   color: var(--main-color);
-  font-size: 24px;
+  font-size: 30px;
 }
 .landing .content button {
   background-color: var(--main-color);
+  border: 0;
+  border-radius: 56px;
   color: var(--white-color);
-  padding: 5px 25px;
-  border-radius: 15px;
-  border: none;
-  transition: 0.3s;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  outline: 0;
+  padding: 10px 21px;
+  position: relative;
+  text-align: center;
+  transition: all var(--main-transition);
 }
+
 .landing .content button:hover {
-  background-color: var(--hover-color);
 }
 /* end landing */
