@@ -12,7 +12,6 @@
 @font-face {
   font-family: "Krona One";
   src: url("../webfonts/krona/KronaOne-Regular.ttf") format(truetype);
-  /* font-display: fallback; */
 }
 
 * {
@@ -39,6 +38,8 @@ body {
 }
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
@@ -159,6 +160,7 @@ a {
   position: relative;
   text-align: center;
   transition: all var(--main-transition);
+  font-family: "Abhaya Libre", serif;
 }
 
 .landing .content button:hover {
