@@ -19,3 +19,15 @@ categories.forEach((category) => {
     });
   });
 });
+
+// load more
+const loadMore = document.querySelector(".load-more");
+console.log(loadMore);
+products.forEach((product, index) => {
+  if (index >= 6) {
+    product.style.display = "none";
+  }
+});
+
+loadMore.addEventListener("click", () => {
+});
