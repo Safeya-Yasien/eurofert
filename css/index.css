@@ -78,11 +78,19 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   min-height: 75px;
+}
+.header .header-content::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: var(--main-color);
+  width: 100%;
+  bottom: 0;
 }
 .header .logo {
   width: 100px;
-  margin: 0;
 }
 .header .links {
   display: flex;
@@ -93,27 +101,27 @@ a {
   margin: 0;
 }
 .header .links ul a {
-  padding: 40px 10px;
+  padding: 40px 20px;
   font-size: 20px;
   transition: var(--main-transition);
   color: var(--black-color);
 }
 
-.header .links ul a.active {
+/* .header .links ul a.active {
   font-weight: bold;
-}
+} */
 
 .header .links ul a.active,
 .header .links ul a:hover {
   color: var(--main-color);
+  font-weight: bold;
 }
 .header .icons {
   display: flex;
 }
 .header .icons a {
-  /* border: 1px solid var(--main-color); */
-  border-radius: 50%;
-  padding: 5px;
+  font-size: 20px;
+  padding: 10px;
   color: var(--black-color);
   transition: 0.3s;
 }
@@ -132,14 +140,21 @@ a {
   position: relative;
   transition: background-image 0.5s ease;
 }
-
 .landing .content {
-  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 45%;
+  min-width: 500px;
+  padding: 50px;
+  background-color: rgba(19, 79, 49, 40%);
+  padding: 40px 30px 40px 100px;
 }
 .landing .content p {
-  padding-top: 150px;
   padding-bottom: 30px;
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 .landing .content p span {
   font-family: "Krona One", sans-serif;
@@ -149,7 +164,7 @@ a {
 .landing .content button {
   background-color: var(--main-color);
   border: 0;
-  border-radius: 56px;
+  border-radius: 20px;
   color: var(--white-color);
   cursor: pointer;
   font-size: 16px;
