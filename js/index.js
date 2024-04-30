@@ -28,3 +28,37 @@ function slideShow() {
 }
 
 slideShow();
+
+// services
+const categories = document.querySelectorAll(".categeories .categeory");
+
+const products = document.querySelectorAll(".content .box");
+
+categories.forEach((category) => {
+  category.addEventListener("click", () => {
+    const valueAttr = category.getAttribute("data-filter");
+
+    products.forEach((product) => {
+      product.style.display = "none";
+
+      if (
+        product.getAttribute("data-filter").toLowerCase() ===
+        valueAttr.toLowerCase()
+      ) {
+        product.style.display = "flex";
+      }
+    });
+
+    products.forEach((product) => {
+      product.classList.remove("actives");
+    });
+    products.forEach((product) => {
+      product.classList.add("actives");
+    });
+
+    categories.forEach((category) => {
+      category.classList.remove("active");
+    });
+    category.classList.add("active");
+  });
+});
