@@ -21,7 +21,8 @@
 }
 
 :root {
-  --main-color: #134f31;
+  /* --main-color: #134f31; */
+  --main-color: #479c18;
   --black-color: #000;
   --white-color: #fff;
   --hover-color: #288d5b;
@@ -73,6 +74,7 @@ a {
   width: 100%;
   z-index: 9999;
   background-color: transparent;
+  background-color: #fff;
 }
 
 .header .header-content {
@@ -128,6 +130,61 @@ a {
 .header .icons a:hover {
   color: var(--hover-color);
 }
+.header .header-content .toggle-menu {
+  background: none;
+  border: none;
+  width: 35px;
+  cursor: pointer;
+  margin-top: 15px;
+  display: none;
+  position: relative;
+}
+.header .header-content .toggle-menu.menu-active::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  position: absolute;
+  bottom: -15px;
+  left: 10px;
+}
+.header .header-content .toggle-menu:focus {
+  outline: none;
+}
+.header .header-content .toggle-menu span {
+  display: block;
+  background-color: #000;
+  height: 4px;
+  margin-bottom: 4px;
+}
+@media (max-width: 991px) {
+  .header .icons {
+    display: none;
+  }
+  .header .links ul {
+    display: none;
+  }
+  .header .links ul.open {
+    background-color: #fff;
+    padding: 10px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 62px;
+    width: 100%;
+    border-radius: 4px;
+    text-align: left;
+  }
+  .header .links ul li a {
+    padding: 10px 0;
+    color: var(--main-color);
+    font-weight: bold;
+  }
+  .header .header-content .toggle-menu {
+    display: inline-block;
+  }
+}
+
 /* end header */
 
 /* start landing */
