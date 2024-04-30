@@ -108,14 +108,13 @@ a {
   color: var(--black-color);
 }
 
-/* .header .links ul a.active {
+.header .links ul a.active {
   font-weight: bold;
-} */
+}
 
 .header .links ul a.active,
 .header .links ul a:hover {
   color: var(--main-color);
-  font-weight: bold;
 }
 .header .icons {
   display: flex;

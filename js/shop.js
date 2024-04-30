@@ -17,6 +17,11 @@ categories.forEach((category) => {
         product.style.display = "flex";
       }
     });
+
+    categories.forEach((category) => {
+      category.classList.remove("active")
+    })
+    category.classList.add("active")
   });
 });
 
