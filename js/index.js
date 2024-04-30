@@ -1,3 +1,25 @@
+// Toggle Menu
+let toggleBtn = document.querySelector(".toggle-menu");
+let tLinks = document.querySelector(".links ul");
+
+toggleBtn.onclick = function (e) {
+  e.stopPropagation();
+  this.classList.toggle("menu-active");
+  tLinks.classList.toggle("open");
+};
+
+document.addEventListener("click", (e) => {
+  if (e.target !== toggleBtn && e.target !== tLinks) {
+    if (tLinks.classList.contains("open")) {
+      toggleBtn.classList.toggle("menu-active");
+      tLinks.classList.toggle("open");
+    }
+  }
+});
+tLinks.onclick = function (e) {
+  e.stopPropagation();
+};
+
 // slidShow
 
 let landing = document.querySelector(".landing");
