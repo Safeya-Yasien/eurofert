@@ -26,7 +26,7 @@
   --black-color: #000;
   --white-color: #fff;
   --hover-color: #288d5b;
-  --main-transition: 0.3s;
+  --main-transition: 0.4s;
 }
 
 body {
@@ -75,6 +75,7 @@ a {
   z-index: 9999;
   background-color: transparent;
   background-color: #fff;
+  box-shadow: 0 0 10px;
 }
 
 .header .header-content {
@@ -104,7 +105,7 @@ a {
   margin: 0;
 }
 .header .links ul a {
-  padding: 40px 20px;
+  padding: 15px 20px;
   font-size: 20px;
   transition: var(--main-transition);
   color: var(--black-color);
@@ -170,15 +171,21 @@ a {
     display: block;
     position: absolute;
     left: 0;
-    top: 62px;
+    top: 74px;
     width: 100%;
     border-radius: 4px;
     text-align: left;
+    box-shadow: 0 0 10px;
   }
   .header .links ul li a {
     padding: 10px 0;
-    color: var(--main-color);
+    color: var(--black-color);
     font-weight: bold;
+  }
+  .header .links ul li a:hover {
+    background-color: #eee;
+    padding: 6px 10px;
+    border-radius: 10px;
   }
   .header .header-content .toggle-menu {
     display: inline-block;
@@ -197,6 +204,16 @@ a {
   position: relative;
   transition: background-image 0.5s ease;
 }
+
+.landing::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 50%);
+}
 .landing .content {
   position: absolute;
   top: 50%;
@@ -210,15 +227,19 @@ a {
 }
 .landing .content p {
   padding-bottom: 30px;
-  font-size: 18px;
   line-height: 1.6;
+  color: var(--white-color);
 }
-.landing .content p span {
+.landing .content p .logo {
   font-family: "Krona One", sans-serif;
   color: var(--main-color);
   font-size: 30px;
 }
-.landing .content button {
+.landing .content p .desc {
+  font-size: 16px;
+  margin-left: 5px;
+}
+.btn {
   background-color: var(--main-color);
   border: 0;
   border-radius: 20px;
@@ -234,8 +255,9 @@ a {
   font-family: "Abhaya Libre", serif;
 }
 
-.landing .content button:hover {
-  opacity: 0.8;
+.landing .content .btn:hover {
+  /* opacity: 0.8; */
+  background-color: var(--main-color);
 }
 /* end landing */
 /* strat services */

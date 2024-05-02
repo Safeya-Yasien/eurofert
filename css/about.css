@@ -1,27 +1,10 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  /* --main-color: #134f31; */
-  --main-color: #479c18;
-  --black-color: #000;
-  --white-color: #fff;
-  --hover-color: #288d5b;
-  --main-transition: 0.3s;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
 .header {
   position: sticky;
   background-color: #fff;
 }
 .about-page {
-  background-image: url("../imgs/landing-6.png");
+  /* background-image: url("../imgs/landing-6.png"); */
+  background-image: url("../imgs/about-5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -31,7 +14,8 @@ body {
 }
 .about-page .overlay {
   content: "";
-  background: #00000053;
+  /* background: #00000053; */
+  background-color: rgba(0, 0, 0, 75%);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -71,7 +55,7 @@ body {
   position: relative;
   width: 300px;
   padding: 26px 35px;
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 11px;
   display: flex;
   justify-content: space-evenly;
