@@ -1,7 +1,3 @@
-.header {
-  position: sticky;
-}
-
 .contact {
   margin-top: 50px;
   padding: 50px 0;
@@ -112,8 +108,4 @@
 }
 .contact .map .social-links .social-link:hover {
   color: #134f31;
-}
-.contact .map .social-links {
-}
-.contact .map .social-links {
 }

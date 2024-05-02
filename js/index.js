@@ -21,7 +21,6 @@ tLinks.onclick = function (e) {
 };
 
 // slidShow
-
 let landing = document.querySelector(".landing");
 
 let arr = [
@@ -58,18 +57,28 @@ function slideShow() {
   setTimeout(slideShow, 3000);
 }
 
-slideShow();
+// dropdown menu
+const dropdownBtn = document.querySelector(".dropdown");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+
+dropdownBtn.addEventListener("click", dropMenu);
+
+function dropMenu(e) {
+  e.preventDefault();
+  dropdownMenu.classList.toggle("show");
+}
 
 // services
-const categories = document.querySelectorAll(".categeories .categeory");
+const servicesCategories = document.querySelectorAll(
+  ".services .categeories .categeory"
+);
+const servicesProducts = document.querySelectorAll(".services .content .box");
 
-const products = document.querySelectorAll(".content .box");
-
-categories.forEach((category) => {
+servicesCategories.forEach((category) => {
   category.addEventListener("click", () => {
     const valueAttr = category.getAttribute("data-filter");
 
-    products.forEach((product) => {
+    servicesProducts.forEach((product) => {
       product.style.display = "none";
 
       if (
@@ -80,16 +89,18 @@ categories.forEach((category) => {
       }
     });
 
-    products.forEach((product) => {
+    servicesProducts.forEach((product) => {
       product.classList.remove("actives");
     });
-    products.forEach((product) => {
+    servicesProducts.forEach((product) => {
       product.classList.add("actives");
     });
 
-    categories.forEach((category) => {
+    servicesCategories.forEach((category) => {
       category.classList.remove("active");
     });
     category.classList.add("active");
   });
 });
+
+slideShow();

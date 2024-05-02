@@ -69,12 +69,13 @@ a {
 
 /* start header */
 .header {
-  position: fixed;
+  /* position: fixed; */
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 9999;
   background-color: transparent;
-  background-color: #fff;
+  background-color: var(--white-color);
   box-shadow: 0 0 10px;
 }
 
@@ -103,6 +104,7 @@ a {
 .header .links ul {
   display: flex;
   margin: 0;
+  position: relative;
 }
 .header .links ul a {
   padding: 15px 20px;
@@ -118,6 +120,15 @@ a {
 .header .links ul a.active,
 .header .links ul a:hover {
   color: var(--main-color);
+}
+.header .links .dropdown-menu {
+  position: absolute;
+  right: 40px;
+  top: 67px;
+  display: none;
+}
+.header .links .dropdown-menu.show {
+  display: flex;
 }
 .header .icons {
   display: flex;
