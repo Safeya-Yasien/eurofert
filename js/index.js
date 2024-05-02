@@ -24,16 +24,6 @@ tLinks.onclick = function (e) {
 let landing = document.querySelector(".landing");
 
 let arr = [
-  // "imgs/landing-3.jpg",
-  // "imgs/landing-4.jpg",
-  // "imgs/landing-5.jpg",
-  // "imgs/landing-6.png",
-  // "imgs/landing-2.jpg",
-  // "imgs/landing-7.png",
-  // "imgs/landing-8.jpg",
-  // "imgs/landing-10.png",
-  // "imgs/landing-11.png",
-  // "imgs/landing-13.jpg",
   "imgs/landing-18.jpg",
   "imgs/landing-1.jpg",
   "imgs/landing-19.jpg",
