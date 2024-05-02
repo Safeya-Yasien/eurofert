@@ -359,6 +359,7 @@ a {
 .products .thumb img {
   max-width: 200px;
   border-bottom: 1px solid var(--main-color);
+  min-height: 280px;
 }
 
 .products .thumb .info {
@@ -391,3 +392,61 @@ a {
   opacity: 0.8;
 }
 /* end products */
+
+/* footer */
+.footer {
+  background-color: #2c2c2c;
+  padding: 30px;
+}
+.footer .logo img {
+  width: 150px;
+  border-radius: 8px;
+  max-width: 100%;
+}
+.footer .logo p {
+  color: #ddd;
+  font-size: 14px;
+  margin: 20px 0 40px;
+}
+.footer .footer-newsletter .form-control {
+  background-color: rgba(0, 0, 0, 20%);
+  border: none;
+  outline: none;
+  color: var(--white-color);
+}
+.footer .footer-newsletter .form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+.footer .footer-newsletter .btn {
+  border-radius: inherit;
+  padding: 10px;
+}
+.footer .footer-newsletter .btn:hover {
+  background-color: var(--main-color);
+}
+.footer .footer-lnews h3 {
+  color: var(--white-color);
+  text-transform: capitalize;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.footer .foot .title {
+  font-size: 20px;
+  color: var(--white-color);
+  margin-bottom: 20px;
+}
+.footer .foot ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.footer .foot ul li a {
+  color: #ddd;
+  transition: var(--main-transition);
+}
+.footer .foot ul li a:hover {
+  color: var(--main-color);
+}
+.footer .contacts svg {
+  margin-right: 12px;
+}
