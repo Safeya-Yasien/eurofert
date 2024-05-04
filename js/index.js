@@ -21,20 +21,18 @@ tLinks.onclick = function (e) {
 };
 
 // slidShow
-
 let landing = document.querySelector(".landing");
 
 let arr = [
+  "imgs/landing-18.jpg",
   "imgs/landing-1.jpg",
-  "imgs/landing-2.jpg",
-  "imgs/landing-3.jpg",
-  "imgs/landing-4.jpg",
-  "imgs/landing-6.png",
-  "imgs/landing-2.jpg",
-  "imgs/landing-7.png",
-  "imgs/landing-8.jpg",
-  "imgs/landing-10.png",
-  "imgs/landing-11.png",
+  "imgs/landing-19.jpg",
+  "imgs/landing-21.jpg",
+  "imgs/landing-14.jpg",
+  "imgs/landing-15.jpg",
+  "imgs/landing-16.jpg",
+  "imgs/landing-17.jpg",
+  "imgs/landing-20.jpg",
 ];
 
 let i = 0;
@@ -49,18 +47,28 @@ function slideShow() {
   setTimeout(slideShow, 3000);
 }
 
-slideShow();
+// dropdown menu
+const dropdownBtn = document.querySelector(".dropdown");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+
+dropdownBtn.addEventListener("click", dropMenu);
+
+function dropMenu(e) {
+  e.preventDefault();
+  dropdownMenu.classList.toggle("show");
+}
 
 // services
-const categories = document.querySelectorAll(".categeories .categeory");
+const servicesCategories = document.querySelectorAll(
+  ".services .categeories .categeory"
+);
+const servicesProducts = document.querySelectorAll(".services .content .box");
 
-const products = document.querySelectorAll(".content .box");
-
-categories.forEach((category) => {
+servicesCategories.forEach((category) => {
   category.addEventListener("click", () => {
     const valueAttr = category.getAttribute("data-filter");
 
-    products.forEach((product) => {
+    servicesProducts.forEach((product) => {
       product.style.display = "none";
 
       if (
@@ -71,16 +79,18 @@ categories.forEach((category) => {
       }
     });
 
-    products.forEach((product) => {
+    servicesProducts.forEach((product) => {
       product.classList.remove("actives");
     });
-    products.forEach((product) => {
+    servicesProducts.forEach((product) => {
       product.classList.add("actives");
     });
 
-    categories.forEach((category) => {
+    servicesCategories.forEach((category) => {
       category.classList.remove("active");
     });
     category.classList.add("active");
   });
 });
+
+slideShow();

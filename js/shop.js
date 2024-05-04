@@ -19,9 +19,9 @@ categories.forEach((category) => {
     });
 
     categories.forEach((category) => {
-      category.classList.remove("active")
-    })
-    category.classList.add("active")
+      category.classList.remove("active");
+    });
+    category.classList.add("active");
   });
 });
 
@@ -29,10 +29,9 @@ categories.forEach((category) => {
 const loadMore = document.querySelector(".load-more");
 console.log(loadMore);
 products.forEach((product, index) => {
-  if (index >= 6) {
+  if (index >= 8) {
     product.style.display = "none";
   }
 });
 
-loadMore.addEventListener("click", () => {
-});
+loadMore.addEventListener("click", () => {});

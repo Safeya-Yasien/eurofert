@@ -1,27 +1,6 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  /* --main-color: #134f31; */
-  --main-color: #479c18;
-  --black-color: #000;
-  --white-color: #fff;
-  --hover-color: #288d5b;
-  --main-transition: 0.3s;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-.header {
-  position: sticky;
-  background-color: #fff;
-}
 .about-page {
-  background-image: url("../imgs/landing-6.png");
+  /* background-image: url("../imgs/landing-6.png"); */
+  background-image: url("../imgs/about-5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -31,7 +10,8 @@ body {
 }
 .about-page .overlay {
   content: "";
-  background: #00000053;
+  /* background: #00000053; */
+  background-color: rgba(0, 0, 0, 75%);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -71,7 +51,7 @@ body {
   position: relative;
   width: 300px;
   padding: 26px 35px;
-  background-color: #fff;
+  /* background-color: #fff; */
   border-radius: 11px;
   display: flex;
   justify-content: space-evenly;
@@ -180,4 +160,33 @@ body {
     width: 100%;
     text-align: left;
   }
+}
+/* number counter */
+.number-counter {
+  padding: 50px 0;
+  background: linear-gradient(to right, #479c18, #2d6e10);
+}
+.number-counter .single-number-counter {
+  text-align: center;
+}
+.number-counter .single-number-counter .counter {
+  font-size: 50px;
+  color: var(--white-color);
+  font-weight: bold;
+}
+.number-counter .single-number-counter h4 {
+  position: relative;
+  color: var(--white-color);
+  margin-top: 30px;
+  font-weight: normal;
+}
+.number-counter .single-number-counter h4::before {
+  content: "";
+  position: absolute;
+  top: -17px;
+  width: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: var(--white-color);
 }

@@ -1,0 +1,31 @@
+/* body {
+  background-color: #f5f5f5;
+} */
+.news {
+  padding: 50px 0;
+  margin-top: 50px;
+  position: relative;
+}
+.news .new {
+  position: relative;
+  background-color: #ddd;    padding: 5px;
+}
+.news .new-img {
+}
+.news img {
+  max-width: 100%;
+}
+.news .info {
+  padding: 20px;
+}
+.news .info .date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.news .info .new-title {
+  margin-bottom: 0;
+  font-size: 16px;
+  margin-top: 10px;
+}

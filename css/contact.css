@@ -1,0 +1,111 @@
+.contact {
+  margin-top: 50px;
+  padding: 50px 0;
+}
+
+.contact .user-data {
+  background-color: #303030;
+  padding: 20px;
+  border-radius: 5px;
+}
+@media (max-width: 991px) {
+  .contact .user-data {
+    margin-bottom: 20px;
+  }
+}
+.contact .user-data .title {
+  color: var(--white-color);
+  margin-bottom: 30px;
+}
+.contact .user-data .title span {
+  color: var(--main-color);
+}
+.contact .user-data .form-group {
+  margin-bottom: 25px;
+}
+.contact .user-data .form-control {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background-color: transparent;
+  outline: none;
+  color: var(--white-color);
+  padding: 6px 30px;
+  border-radius: 0;
+}
+.contact .user-data .form-control:focus {
+  box-shadow: none;
+}
+.contact .user-data textarea {
+  height: 150px;
+  resize: none;
+}
+.contact .user-data .check-box {
+  display: flex;
+  align-items: center;
+}
+.contact .user-data .agree-term {
+  margin-right: 10px;
+}
+.contact .user-data .agree-term-label {
+  color: var(--white-color);
+}
+.contact .user-data .agree-term-label .terms {
+  color: var(--white-color);
+  text-decoration: underline;
+  font-size: 12px;
+}
+.contact .user-data .form-submit {
+  margin: 0 auto;
+  display: block;
+  background-color: #134f31;
+  border-radius: 10px;
+  padding: 6px 20px;
+  margin-top: 30px;
+}
+.contact .user-data .form-submit:hover {
+  background-color: #134f31;
+  color: var(--white-color);
+}
+/* map */
+.contact .map {
+  background-color: var(--white-color);
+  padding: 20px;
+  box-shadow: 0 0 10px;
+  border-radius: 5px;
+}
+.contact .map p {
+  margin-bottom: 30px;
+}
+.contact .map .location iframe {
+  max-width: 100%;
+}
+.contact .map .contact-links {
+  margin-top: 40px;
+}
+.contact .map .contact-links ul > li:not(:last-child) {
+  margin-bottom: 15px;
+}
+.contact .map .contact-links .contact-link {
+  color: var(--black-color);
+}
+.contact .map .contact-links svg {
+  color: #134f31;
+  margin-right: 10px;
+}
+/* social links */
+.contact .map .social-links {
+  margin-top: 20px;
+}
+.contact .map .social-links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .map .social-links .social-link {
+  padding: 8px;
+  color: var(--black-color);
+  transition: var(--main-transition);
+}
+.contact .map .social-links .social-link:hover {
+  color: #134f31;
+}
