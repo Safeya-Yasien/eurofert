@@ -3,32 +3,56 @@
   margin-top: 50px;
   position: relative;
 }
-.product-details {
-}
+
 .product-details .product {
   display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+@media (max-width: 991px) {
+  .product-details .product {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.product-details .product .img {
+  text-align: center;
+  padding: 10px 0;
+  width: 35%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 50%);
 }
 .product-details .product img {
-  height: 300px;
   min-height: 300px;
   max-width: 100%;
 }
+@media (max-width: 991px) {
+  .product-details .product .img {
+    width: 95%;
+  }
+}
 .product-details .product-info {
   /* background-color: white; */
+  width: 60%;
   padding: 20px;
   border-radius: 10px;
 }
-.product-details .product-info {
+@media (max-width: 991px) {
+  .product-details .product-info {
+    width: 100%;
+  }
 }
-.product-details .product-info {
+.product-details .product-info h3 {
+  font-family: "Krona One", sans-serif;
+  color: var(--main-color);
+  font-size: 30px;
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed var(--main-color);
+  width: fit-content;
+  margin-bottom: 20px;
 }
-.product-details .product-info {
-}
-.product-details {
-}
-.product-details {
-}
-.product-details {
-}
-.product-details {
+
+.product-details .product-info p {
+  font-size: 14px;
+  line-height: 1.9;
 }
