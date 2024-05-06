@@ -10,13 +10,13 @@
 }
 .about-page .overlay {
   content: "";
-  /* background: #00000053; */
   background-color: rgba(0, 0, 0, 75%);
   height: 100%;
   width: 100%;
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 1;
 }
 .about-page .content {
   position: absolute;
@@ -25,7 +25,8 @@
   transform: translate(-50%, -40%);
   padding: 50px;
   text-align: center;
-}
+z-index: 2;}
+
 @media (max-width: 767px) {
   .about-page .content {
     padding: 40px 20px;
@@ -51,14 +52,12 @@
   position: relative;
   width: 300px;
   padding: 26px 35px;
-  /* background-color: #fff; */
   border-radius: 11px;
   display: flex;
   justify-content: space-evenly;
   margin: 10px auto;
 }
-.about-page ul li {
-}
+
 .about-page ul li a {
   width: 40px;
   padding: 10px 15px;
