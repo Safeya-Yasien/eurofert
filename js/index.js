@@ -25,14 +25,19 @@ let landing = document.querySelector(".landing");
 
 let arr = [
   "imgs/landing-18.jpg",
-  "imgs/landing-1.jpg",
-  "imgs/landing-19.jpg",
+  // "imgs/landing-1.jpg",
+  "imgs/landing-26.jpg",
+  // "imgs/landing-19.jpg",
   "imgs/landing-21.jpg",
-  "imgs/landing-14.jpg",
-  "imgs/landing-15.jpg",
+  // "imgs/landing-14.jpg",
+  // "imgs/landing-15.jpg",
   "imgs/landing-16.jpg",
   "imgs/landing-17.jpg",
-  "imgs/landing-20.jpg",
+  "imgs/landing-22.jpg",
+  "imgs/landing-23.jpg",
+  "imgs/landing-24.jpg",
+  "imgs/landing-25.jpg",
+  // "imgs/landing-20.jpg",
 ];
 
 let i = 0;
